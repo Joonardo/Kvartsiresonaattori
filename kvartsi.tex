@@ -101,6 +101,8 @@ The circuit we made and used is basically a voltage amplifier built around LF356
 
 To measure quartz resonator the circuit must be connected to a DAQ-unit as shown in figure \ref{fig:circ} and then it can be measured by setting the DAQ-unit to output a sine wave with certain frequency and then measuring the output of our circuit. With multiple measurements a spike in gain is expected at the resonance frequency of the quartz resonator as seen in figure \ref{fig:f-g}.
 
+We tested our circuit at frequency range of $\SI{10}{\kilo\hertz} - \SI{100}{\kilo\hertz}$ and noticed that the noise increases with the frequency, but however at approximately $\SI{30}{\kilo\hertz}$ the noise-to-signal ratio is still reasonable as seen in figure \ref{fig:nsr}, so we can use our circuit to obtain quite good approximations of properties of quartz resonator. 
+
 \begin{figure}[!ht]
 \centering
 \includegraphics[width = \textwidth]{kuvat/f-g.png}
@@ -113,6 +115,13 @@ To measure quartz resonator the circuit must be connected to a DAQ-unit as shown
 \includegraphics[width = \textwidth]{kuvat/piiri.png}
 \caption{Circuit diagram of voltage amplifier connected to DAQ-unit.}
 \label{fig:circ}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = \textwidth]{kuvat/nsr.png}
+\caption{Gain as function of frequency without quartz resonator.}
+\label{fig:nsr}
 \end{figure}
 
 \begin{thebibliography}{1}
