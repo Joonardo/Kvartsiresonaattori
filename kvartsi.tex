@@ -7,6 +7,7 @@
 \usepackage{amsmath}
 \usepackage{fancyhdr}
 \usepackage{siunitx}
+\usepackage{listings}
 
 \makeatletter
 \def\@seccntformat#1{\csname the#1\endcsname\hspace*{0.5em}$|$\hspace*{0.5em}}
@@ -30,11 +31,34 @@
 
 \section{Introduction}
 
-In this assignment we investigated electronic properties of one of the most common electronic components, the quartz tuning fork or quartz resonator, which is used in watches and other every day electrical appliances to provide a stable clocking frequency. Typically the frequency is $f_0 = \SI{32768}{\hertz}$, because is is a round number ($32768_{10} = {2^{15}}_{10} = 1000000000000000_2$) in base 2, which is commonly used in electrical appliances.
+In this assignment we investigated electronic properties of one of the most common electronic components, the quartz tuning fork or quartz resonator, like one in figure \ref{fig:kvres}. It is used in watches and other every day electrical appliances to provide a stable clocking frequency. Typically the frequency is $f_0 = \SI{32768}{\hertz}$, because is is a round number ($32768_{10} = {2^{15}}_{10} = 1000000000000000_2$) in base 2, which is commonly used in electrical appliances.
 
 Contrary to conventional tuning fork, one does not need generate mechanical excitation
 on the quartz tuning fork, because quartz has piezoelectric properties and thus mechanical excitation can be replaced with electronic one.
 
 \section{Theory}
+
+\begin{figure}
+	\centering
+	\includegraphics[width = \textwidth]{kuvat/kvres.png}
+	\caption{Quartz resonator}
+	\label{fig:kvres}
+\end{figure}
+
+\section{Results}
+
+\begin{figure}
+	\centering
+	\includegraphics[width = \textwidth]{kuvat/steadystate.png}
+	\caption{Steady state}
+	\label{fig:steady}
+\end{figure}
+
+\appendix
+
+\section{Source code}
+
+\lstinputlisting[caption = ac.m]{matlab/ac.m}
+%\lstinputlisting[caption = ac.m]{matlab/DAQreadout.m}
 
 \end{document}
