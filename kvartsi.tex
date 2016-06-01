@@ -90,19 +90,6 @@ C_0 \approx 3.5\cdot10^{-9}~\mathrm{F}
 
 As we can see, the values are far from typical, so it would be very difficult and expensive to produce needed components.
 
-\section{Measurement methods}
-To collect data we used a DAQ (Measurement Computing USB-1208HS-2AO analog input/output device). We used its analog out -function to produce wanted signals to the circuit in figure \ref{fig:circuit} and collected both it's original signal and the modified signals with analog inputs. The triangle in the circuit represents an operation amplifier, which transforms $V_+$ and $V_-$ signals to a single signal $V_{out}$:
-
-\begin{align}
-	V_{out} = A(V_+-V_-).
-\end{align}
-$A$ is a very large number, so in practice $V_{out}$ can get only values 9V and -9V.
-
-The whole circuit works as a voltage amplifier. Calculations are in appendix \ref{sec:voltamp}, and the final result is
-\begin{align}
-V_{out} = -\frac{R_F}{R_1}V_{in}.
-\end{align}
-
 \begin{figure}
 	\centering
 	\includegraphics[width = 0.5\textwidth]{kuvat/piiri}
@@ -119,7 +106,7 @@ V_{out} = -\frac{R_F}{R_1}V_{in}.
 
 \section{Our circuit}
 
-The circuit we made and used is basically a voltage amplifier built around LF356N operational amplifier and later it is modified to current-voltage converter by replacing $R_1$-resistor with quartz resonator and changing $R_f$-resistor to a approximately $\SI{1}{\mega\ohm}$-resistor. The derivation of $K$ (equation \eqref{eqn:K}) is done in the appendix as part of a pretask.
+The circuit we made and used is basically a voltage amplifier built around LF356N operational amplifier and later it is modified to current-voltage converter by replacing $R_1$-resistor with quartz resonator and changing $R_f$-resistor to a approximately $\SI{1}{\mega\ohm}$-resistor. The derivation of $K$ (equation \eqref{eqn:K}) is done in the appendix \ref{sec:K} as part of a pretask.
 
 To measure quartz resonator the circuit must be connected to a DAQ-unit as shown in figure \ref{fig:circ} and then it can be measured by setting the DAQ-unit to output a sine wave with certain frequency and then measuring the output of our circuit. With multiple measurements a spike in gain is expected at the resonance frequency of the quartz resonator as seen in figure \ref{fig:f-g}.
 
@@ -249,7 +236,7 @@ And because $A$ is usually large,
 I_{in} \approx \frac{V_{out}}{R_f}
 \end{equation*}
 
-\subsubsection{Task 3}
+\subsubsection{Task 3} \label{sec:K}
 According to previous task,
 
 \begin{align}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.24)  1 JUN 2016 22:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.24)  1 JUN 2016 22:23
 entering extended mode
 **kvartsi.tex
 (C:\Users\Tetraedri_\Git\Kvartsiresonaattori-master\kvartsi.tex
@@ -846,62 +846,62 @@ File: equivalence_circuit.png Graphic file (type png)
 <use equivalence_circuit.png>
 Package pdftex.def Info: equivalence_circuit.png used on input line 68.
 (pdftex.def)             Requested size: 195.0pt x 220.52562pt.
- [3] [4 <C:/Users/Tetraedri_/Git/Kvartsiresonaattori-master/equivalence_circuit
-.png>]
-<kuvat/piiri.png, id=37, 310.15875pt x 257.46187pt>
+ [3]
+<kuvat/piiri.png, id=33, 310.15875pt x 257.46187pt>
 File: kuvat/piiri.png Graphic file (type png)
  <use kuvat/piiri.png>
-Package pdftex.def Info: kuvat/piiri.png used on input line 108.
+Package pdftex.def Info: kuvat/piiri.png used on input line 95.
 (pdftex.def)             Requested size: 195.0pt x 161.86789pt.
 
-<kuvat/steadystate.png, id=38, 433.62pt x 323.70938pt>
+<kuvat/steadystate.png, id=34, 433.62pt x 323.70938pt>
 File: kuvat/steadystate.png Graphic file (type png)
 
 <use kuvat/steadystate.png>
-Package pdftex.def Info: kuvat/steadystate.png used on input line 115.
+Package pdftex.def Info: kuvat/steadystate.png used on input line 102.
 (pdftex.def)             Requested size: 390.0pt x 291.15793pt.
- <kuvat/f-g.png, id=39, 427.5975pt x 319.94531pt>
+ [4 <C:/Users/Tetraedri_/Git/Kvartsiresonaattori-master/equivalence_circuit.png
+>] <kuvat/f-g.png, id=39, 427.5975pt x 319.94531pt>
 File: kuvat/f-g.png Graphic file (type png)
 
 <use kuvat/f-g.png>
-Package pdftex.def Info: kuvat/f-g.png used on input line 128.
+Package pdftex.def Info: kuvat/f-g.png used on input line 115.
 (pdftex.def)             Requested size: 390.0pt x 291.81462pt.
 File: kuvat/piiri.png Graphic file (type png)
  <use kuvat/piiri.png>
-Package pdftex.def Info: kuvat/piiri.png used on input line 135.
+Package pdftex.def Info: kuvat/piiri.png used on input line 122.
 (pdftex.def)             Requested size: 390.0pt x 323.7358pt.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 141.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 128.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (66.59262pt too wide) in paragraph at lines 141--142
+Overfull \hbox (66.59262pt too wide) in paragraph at lines 128--129
 []\T1/cmtt/m/n/12 https://mycourses.aalto.fi/pluginfile.php/211810/mod_resource
 /content/1 
  []
 
-[5 <C:/Users/Tetraedri_/Git/Kvartsiresonaattori-master/kuvat/piiri.png>]
-(C:\Users\Tetraedri_\Git\Kvartsiresonaattori-master\matlab/ac.m [6 <C:/Users/Te
-traedri_/Git/Kvartsiresonaattori-master/kuvat/steadystate.png (PNG copy)>])
-[7 <C:/Users/Tetraedri_/Git/Kvartsiresonaattori-master/kuvat/f-g.png (PNG copy)
->] [8] [9] <kuvat/sampling.png, id=59, 557.08125pt x 478.78876pt>
+(C:\Users\Tetraedri_\Git\Kvartsiresonaattori-master\matlab/ac.m [5 <C:/Users/Te
+traedri_/Git/Kvartsiresonaattori-master/kuvat/piiri.png>]) [6 <C:/Users/Tetraed
+ri_/Git/Kvartsiresonaattori-master/kuvat/steadystate.png (PNG copy)>] [7 <C:/Us
+ers/Tetraedri_/Git/Kvartsiresonaattori-master/kuvat/f-g.png (PNG copy)>]
+[8] [9] <kuvat/sampling.png, id=59, 557.08125pt x 478.78876pt>
 File: kuvat/sampling.png Graphic file (type png)
 
 <use kuvat/sampling.png>
-Package pdftex.def Info: kuvat/sampling.png used on input line 211.
+Package pdftex.def Info: kuvat/sampling.png used on input line 198.
 (pdftex.def)             Requested size: 390.0pt x 335.19368pt.
- [10] [11 <C:/Users/Tetraedri_/Git/Kvartsiresonaattori-master/kuvat/sampling.pn
-g (PNG copy)>] [12] [13] [14]
+ [10 <C:/Users/Tetraedri_/Git/Kvartsiresonaattori-master/kuvat/sampling.png (PN
+G copy)>] [11] [12] [13] [14]
 (C:\Users\Tetraedri_\Git\Kvartsiresonaattori-master\kvartsi.aux) ) 
 Here is how much of TeX's memory you used:
- 13787 strings out of 493921
- 267566 string characters out of 3144861
- 272940 words of memory out of 3000000
- 16968 multiletter control sequences out of 15000+200000
+ 13788 strings out of 493921
+ 267573 string characters out of 3144861
+ 272953 words of memory out of 3000000
+ 16969 multiletter control sequences out of 15000+200000
  23159 words of font info for 65 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 35i,14n,43p,10379b,1667s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,14n,43p,10379b,1669s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Te
 traedri_\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.p
 k> <C:\Users\Tetraedri_\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
@@ -923,9 +923,9 @@ blic/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmsy8.pfb>
-Output written on kvartsi.pdf (15 pages, 2016248 bytes).
+Output written on kvartsi.pdf (15 pages, 2010563 bytes).
 PDF statistics:
- 388 PDF objects out of 1000 (max. 8388607)
+ 375 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
