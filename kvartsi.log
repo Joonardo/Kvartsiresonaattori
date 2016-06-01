@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.2.4)  1 JUN 2016 23:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.2.4)  2 JUN 2016 00:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -910,60 +910,107 @@ File: kuvat/steadystate.png Graphic file (type png)
 <use kuvat/steadystate.png>
 Package pdftex.def Info: kuvat/steadystate.png used on input line 102.
 (pdftex.def)             Requested size: 390.0pt x 291.15793pt.
- [4 <./equivalence_circuit.png>] [5 <./kuvat/piiri.png>] <kuvat/f-g.png, id=44,
- 427.5975pt x 319.94531pt>
+ [4 <./equivalence_circuit.png>]
+! Missing { inserted.
+<to be read again> 
+                   \let 
+l.115 ... is seen in figure \ref{fig:f-ps}.$^\cite
+                                                  {Ohje}$
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.115 ...n in figure \ref{fig:f-ps}.$^\cite{Ohje}$
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[5 <./kuvat/piiri.png>] <kuvat/f-g.png, id=44, 427.5975pt x 319.94531pt>
 File: kuvat/f-g.png Graphic file (type png)
- <use kuvat/f-g.png>
+
+<use kuvat/f-g.png>
 Package pdftex.def Info: kuvat/f-g.png used on input line 119.
 (pdftex.def)             Requested size: 312.00119pt x 233.45071pt.
-
-<kuvat/f-ps_res.png, id=45, 421.575pt x 297.36093pt>
+ <kuvat/f-ps_res.png, id=45, 421.575pt x 297.36093pt>
 File: kuvat/f-ps_res.png Graphic file (type png)
- <use kuvat/f-ps_res.png>
+
+<use kuvat/f-ps_res.png>
 Package pdftex.def Info: kuvat/f-ps_res.png used on input line 126.
 (pdftex.def)             Requested size: 312.00119pt x 220.0754pt.
-
-<kuvat/nsr.png, id=46, 421.575pt x 316.18124pt>
+ <kuvat/nsr.png, id=46, 421.575pt x 316.18124pt>
 File: kuvat/nsr.png Graphic file (type png)
- <use kuvat/nsr.png>
+
+<use kuvat/nsr.png>
 Package pdftex.def Info: kuvat/nsr.png used on input line 140.
 (pdftex.def)             Requested size: 312.00119pt x 234.00423pt.
-
-<kuvat/f-ps.png, id=47, 421.575pt x 297.36093pt>
+ <kuvat/f-ps.png, id=47, 421.575pt x 297.36093pt>
 File: kuvat/f-ps.png Graphic file (type png)
- <use kuvat/f-ps.png>
+
+<use kuvat/f-ps.png>
 Package pdftex.def Info: kuvat/f-ps.png used on input line 147.
 (pdftex.def)             Requested size: 312.00119pt x 220.0754pt.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 153.
+ [6 <./kuvat/steadystate.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 155.
 
 
 (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (66.59262pt too wide) in paragraph at lines 155--156
-[]\T1/cmtt/m/n/12 https://mycourses.aalto.fi/pluginfile.php/211810/mod_resource
-/content/1 
+Overfull \hbox (4.8577pt too wide) in paragraph at lines 157--159
+[]\T1/cmtt/m/n/12 https://mycourses.aalto.fi/pluginfile.php/211815/mod_resource
+ 
  []
 
-[6 <./kuvat/steadystate.png (PNG copy)>] (./matlab/ac.m [7 <./kuvat/f-g.png (PN
-G copy)>]) [8 <./kuvat/f-ps_res.png (PNG copy)>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
+\T1/cmtt/m/n/12 /content/1/projekti_tyoohjeet.pdf\T1/cmr/m/n/12 , "SCI-C0200 Fy
+si-ikan ja
+ []
+
+
+Underfull \hbox (badness 3138) in paragraph at lines 157--159
+\T1/cmr/m/n/12 om-i-naisvärähte-lyn mit-taus ja analysointi, Työn taus-ta-ma-te
+-ri-aali",
+ []
+
+
+Overfull \hbox (4.8577pt too wide) in paragraph at lines 160--161
+[]\T1/cmtt/m/n/12 https://mycourses.aalto.fi/pluginfile.php/211810/mod_resource
+ 
+ []
+
+
+Underfull \hbox (badness 7722) in paragraph at lines 160--161
+\T1/cmtt/m/n/12 /content/1/projekti_kertaohje4.pdf\T1/cmr/m/n/12 , "Kvart-sires
+-on-aat-torin mit-
+ []
+
+[7 <./kuvat/f-g.png (PNG copy)>] (./matlab/ac.m [8 <./kuvat/f-ps_res.png (PNG c
+opy)>]
 
 LaTeX Warning: Text page 9 contains only floats.
 
-[9 <./kuvat/nsr.png (PNG copy)> <./kuvat/f-ps.png (PNG copy)>] [10]
+[9 <./kuvat/nsr.png (PNG copy)> <./kuvat/f-ps.png (PNG copy)>]) [10]
 <kuvat/sampling.png, id=66, 557.08125pt x 478.78876pt>
 File: kuvat/sampling.png Graphic file (type png)
 
 <use kuvat/sampling.png>
-Package pdftex.def Info: kuvat/sampling.png used on input line 225.
+Package pdftex.def Info: kuvat/sampling.png used on input line 231.
 (pdftex.def)             Requested size: 390.0pt x 335.19368pt.
  [11] [12 <./kuvat/sampling.png (PNG copy)>] [13]
 [14] [15] [16] (./kvartsi.aux) ) 
 Here is how much of TeX's memory you used:
- 14165 strings out of 493054
- 271944 string characters out of 6140587
- 289453 words of memory out of 5000000
- 17547 multiletter control sequences out of 15000+600000
+ 14166 strings out of 493054
+ 271950 string characters out of 6140587
+ 289458 words of memory out of 5000000
+ 17548 multiletter control sequences out of 15000+600000
  23159 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,14n,43p,10379b,1677s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -983,7 +1030,7 @@ ist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1
 /public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-supe
 r/sfrm2074.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb>
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on kvartsi.pdf (17 pages, 2128704 bytes).
+Output written on kvartsi.pdf (17 pages, 2131982 bytes).
 PDF statistics:
  144 PDF objects out of 1000 (max. 8388607)
  95 compressed objects within 1 object stream

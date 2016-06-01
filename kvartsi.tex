@@ -34,7 +34,7 @@
 \begin{figure}
 	\centering
 	\includegraphics[width = \textwidth]{kuvat/kvres.png}
-	\caption{Quartz resonator}
+	\caption{Quartz resonator.$^{\cite{Ohje}}$}
 	\label{fig:kvres}
 \end{figure}
 
@@ -66,7 +66,7 @@ where according to figure \ref{fig:steady} $t \approx 0.4$s is the time constant
 \begin{figure}[!ht]
 \centering
 \includegraphics[width = 0.5\textwidth]{equivalence_circuit}
-\caption{Equivalence circuit of a tuning fork.} \label{fig:equivalence_circuit}
+\caption{Equivalence circuit of a tuning fork.$^{\cite{Ohje}}$} \label{fig:equivalence_circuit}
 \end{figure}
 
 An equivalence circuit of tuning fork is an electrical circuit which can't be distinguished from tuning fork in a black box. The components of equivalence circuit in figure \ref{fig:equivalence_circuit} are obtained from following equations:
@@ -112,7 +112,7 @@ First we characterised the circuit by measuring its $G$-value by altering input 
 
 To measure quartz resonator the circuit must be connected to a DAQ-unit as shown in figure \ref{fig:circuit} and then it can be measured by setting the DAQ-unit to output a sine wave with certain frequency and then measuring the output of our circuit. With multiple measurements a spike in gain is expected at the resonance frequency of the quartz resonator as seen in figure \ref{fig:f-g}. Also as seen in figure \ref{fig:f-ps_res} the phase shift seems to go towards $\pi$ when the frequency goes towards resonance frequency.
 
-We tested our circuit at frequency range of $\SI{10}{\kilo\hertz} - \SI{100}{\kilo\hertz}$ and noticed that the noise increases with the frequency, but however at approximately $\SI{30}{\kilo\hertz}$ the noise-to-signal ratio is still reasonable as seen in figure \ref{fig:nsr}, so we can use our circuit to obtain quite good approximations of properties of quartz resonator. The same noise is seen in figure \ref{fig:f-ps}.
+We tested our circuit at frequency range of $\SI{10}{\kilo\hertz} - \SI{100}{\kilo\hertz}$ and noticed that the noise increases with the frequency, but however at approximately $\SI{30}{\kilo\hertz}$ the noise-to-signal ratio is still reasonable as seen in figure \ref{fig:nsr}, so we can use our circuit to obtain quite good approximations of properties of quartz resonator. The same noise is seen in figure \ref{fig:f-ps}.$^\cite{Ohje}$
 
 \begin{figure}[!ht]
 \centering
@@ -149,12 +149,18 @@ We tested our circuit at frequency range of $\SI{10}{\kilo\hertz} - \SI{100}{\ki
 \label{fig:f-ps}
 \end{figure}
 
+\newpage
+
 \begin{thebibliography}{1}
 \bibitem{Intro} \texttt{https://mycourses.aalto.fi/pluginfile.php/211815/mod\_folder\\/content/0/TuningFork.pdf}, "Introduction to the quartz tuning fork", accessed 2016.06.01
 
-\bibitem{Qvalue} \texttt{https://mycourses.aalto.fi/pluginfile.php/211810/mod\_resource/content/1\\/projekti\_kertaohje4.pdf}, "Kvartsiresonaattorin mittaus", accessed 2016.06.01
+\bibitem{Ohje} \texttt{https://mycourses.aalto.fi/pluginfile.php/211815/mod\_resource\\/content/1/projekti\_tyoohjeet.pdf}, "SCI-C0200 Fysiikan ja matematiikan menetelmien studio (10 op)
+Projektityö: Kvartsikiteen ominaisvärähtelyn mittaus ja analysointi, Työn taustamateriaali", accessed 2016.06.01
+
+\bibitem{Qvalue} \texttt{https://mycourses.aalto.fi/pluginfile.php/211810/mod\_resource\\/content/1/projekti\_kertaohje4.pdf}, "Kvartsiresonaattorin mittaus", accessed 2016.06.01
 \end{thebibliography}
 
+\newpage
 \appendix
 
 \section{Source code}
