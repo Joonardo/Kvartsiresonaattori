@@ -77,8 +77,30 @@ L_m \approx 3.3\cdot10^{-20}~\mathrm{H}\\
 C_m \approx 7.1\cdot10^8~\mathrm{F}\\
 R_m \approx 5.3\cdot10^{-19}~\Omega\\
 C_0 \approx 3.5\cdot10^{-9}~\mathrm{F}
-\end{cases}
+\end{cases}.
 \end{align*}
+
+As we can see, the values are far from typical, so it would be very difficult and expensive to produce needed components.
+
+\section{Measurement methods}
+To collect data we used a DAQ (Measurement Computing USB-1208HS-2AO analog input/output device). We used its analog out -function to produce wanted signals to the circuit in figure \ref{fig:circuit} and collected both it's original signal and the modified signals with analog inputs. The triangle in the circuit represents an operation amplifier, which transforms $V_+$ and $V_-$ signals to a single signal $V_{out}$:
+
+\begin{align}
+	V_{out} = A(V_+-V_-).
+\end{align}
+$A$ is a very large number, so in practice $A_{out}$ can get only values 9V and -9V.
+
+The whole circuit works as a voltage amplifier. Calculations are in appendix \ref{sec:voltamp}, and the final result is
+\begin{align}
+V_{out} = -\frac{R_F}{R_1}V_{in}.
+\end{align}
+
+\begin{figure}
+	\centering
+	\includegraphics[width = 0.5\textwidth]{kuvat/piiri}
+	\caption{Circuit used to collect data. Both batteries are 9V.}
+	\label{fig:circuit}
+\end{figure}
 
 \begin{figure}
 	\centering
@@ -115,7 +137,7 @@ C_0 \approx 3.5\cdot10^{-9}~\mathrm{F}
 
 In this project we are supposed to study electric properties of quartz resonators and build a circuit, which is used to collect data from the resonator. Data is then analyzed with MATLAB. Also we are going to measure some properties of the circuit itself.
 
-\subsubsection{Task 2}
+\subsubsection{Task 2} \label{sec:voltamp}
 
 $V_+$ is connected to ground, so $V_+ = 0$.
 
@@ -127,31 +149,31 @@ V_{out} =& A(V_+ - V_-) \\
 Then according to Kirchoff II and Ohm's law,
 
 \begin{align*}
-V_- - V_{out} = R_f I \quad \wedge & \quad I = \frac{V_{in} - V_{out}}{R_f + R_{in}} \\
-\Rightarrow V_- =& R_f \frac{V_{in} - V_{out}}{R_f + R_{in}} + V_{out} \\
-\Rightarrow V_- =& \frac{R_f V_{in} - R_f V_{out}}{R_f + R_{in}} + \frac{R_f V_{out} + R_{in} V_{out}}{R_f + R_{in}} \\
-\Rightarrow V_- &= \frac{R_f V_{in} + R_{in} V_{out}}{R_f + R_{in}} \\
+V_- - V_{out} = R_F I \quad \wedge & \quad I = \frac{V_{in} - V_{out}}{R_F + R_1} \\
+\Rightarrow V_- =& R_F \frac{V_{in} - V_{out}}{R_F + R_1} + V_{out} \\
+\Rightarrow V_- =& \frac{R_F V_{in} - R_F V_{out}}{R_F + R_1} + \frac{R_F V_{out} + R_1 V_{out}}{R_F + R_1} \\
+\Rightarrow V_- &= \frac{R_F V_{in} + R_1 V_{out}}{R_F + R_1} \\
 \end{align*}
 
 Then combining these two equations, we obtain $V_{out}$ as function of $V_{in}$.
 
 \begin{align*}
-V_{out} &= -A\frac{R_f V_{in} + R_{in} V_{out}}{R_f + R_{in}} \\
-\Leftrightarrow V_{out} + A\frac{R_{in} V_{out}}{R_f + R_{in}} &= -\frac{A R_f V_{in}}{R_f + R_{in}} \\
-\Leftrightarrow V_{out}\frac{R_f + R_{in} + A R_{in}}{R_f + R_{in}} &= -\frac{A R_f V_{in}}{R_f + R_{in}} \\
-\Leftrightarrow V_{out} &= -\frac{A R_f}{R_f + R_{in} + A R_{in}} V_{in}
+V_{out} &= -A\frac{R_F V_{in} + R_1 V_{out}}{R_F + R_1} \\
+\Leftrightarrow V_{out} + A\frac{R_1 V_{out}}{R_F + R_1} &= -\frac{A R_F V_{in}}{R_F + R_1} \\
+\Leftrightarrow V_{out}\frac{R_F + R_1 + A R_1}{R_F + R_1} &= -\frac{A R_F V_{in}}{R_F + R_1} \\
+\Leftrightarrow V_{out} &= -\frac{A R_F}{R_F + R_1 + A R_1} V_{in}
 \end{align*}
 
 When $A$ is very large, we obtain the following form.
 
 \begin{equation*}
-V_{out} \approx -\frac{R_f}{R_{in}} V_{in}
+V_{out} \approx -\frac{R_F}{R_1} V_{in}
 \end{equation*}
 
 And thus,
 
 \begin{equation}
-G = -\frac{R_f}{R_{in}}
+G = -\frac{R_F}{R_1}
 \label{eqn:G}
 \end{equation}
 
