@@ -16,7 +16,7 @@
 \pagestyle{fancy}
 
 \title{\textbf{Quartz resonator} \\ SCI-C0200}
-\author{Joonatan Bergholm 507260 \\ Osama Abuzaid XXXXXX}
+\author{Joonatan Bergholm 507260 \\ Osama Abuzaid 524832}
 
 \begin{document}
 
@@ -36,7 +36,49 @@ In this assignment we investigated electronic properties of one of the most comm
 Contrary to conventional tuning fork, one does not need generate mechanical excitation
 on the quartz tuning fork, because quartz has piezoelectric properties and thus mechanical excitation can be replaced with electronic one.
 
-\section{Theory}
+\section{Tuning fork}
+Piezoelectricity is a phenomena, where deformation of a material causes electrical current and vice versa. Crystal oscillators are made of piezoelectric materials, and in electric circuits they are used to produce an electrical signal with precise frequency. The Q-value of crystal oscillator is defined to be the oscillators energy per dissipated energy at one oscillation:
+\begin{align}
+Q \equiv 2\pi\frac{E}{\Delta E}.
+\end{align}
+
+In our work we are using quartz tuning forks. The fundamental frequency of a tuning fork is given by equation
+\begin{align}
+f_0 \approx 0.16\frac{T}{L^2}\sqrt{\frac{E}{\rho}},
+\end{align}
+where $L = 3.98 $mm is the length of one quartz bar, $T = 0.60 $mm the width of the bar, $E = 79 $GPa the Young modulus and $\rho = 2660\frac{\mathrm{kg}}{\mathrm{m}^3}$ the density of quartz. Also the thickness of fork we are using in our work is $H = 0.30$mm. Advantage of having two bars instead of one is that the oscillations of two bars at the fulcrum cancel each other, resulting to better Q-value.
+
+We can estimate the Q-value of the tuning fork from figure \ref{fig:steady} by using equation$^{\cite{Qvalue}}$
+\begin{align*}
+t &= \frac{f_0}{Q}\\
+\Rightarrow Q &= tf_0 \approx 13000
+\end{align*}
+where $t \approx 0.4$s is the time constant, which tells the time it takes for the resonator to stabilize to the equilibrium amplitude.
+
+\begin{figure}
+\centering
+\includegraphics[width = 0.5\textwidth]{equivalence_circuit}
+\caption{Equivalence circuit of a tuning fork.} \label{fig:equivalence_circuit}
+\end{figure}
+
+An equivalence circuit of tuning fork is an electrical circuit which can't be distinguished from tuning fork in a black box. The components of equivalence circuit in figure \ref{fig:equivalence_circuit} are obtained from following equations:
+\begin{align}
+\begin{cases}
+L_m = \frac{2\rho L^3}{9e_p^2HT}\\
+C_m = \frac{1}{\omega_0^2L_m}\\
+R_m = \frac{\omega_0 L_m}{Q}=\gamma L_m\\
+C_0 = \frac{\epsilon_0\epsilon_rA}{T}
+\end{cases},
+\end{align}
+where $e_p \approx 0.18 \frac{\mathrm{C}}{\mathrm{m}^2}$ is the piezoelectric modulus of tuning fork, $\epsilon_0$ and $\epsilon_r$ are the vacuum and relative permittivity, respectively, and $A = TL$ the effective area. Equivalence circuit of our tuning fork would have following components:
+\begin{align*}
+\begin{cases}
+L_m \approx 3.3\cdot10^{-20}~\mathrm{H}\\
+C_m \approx 7.1\cdot10^8~\mathrm{F}\\
+R_m \approx 5.3\cdot10^{-19}~\Omega\\
+C_0 \approx 3.5\cdot10^{-9}~\mathrm{F}
+\end{cases}
+\end{align*}
 
 \begin{figure}
 	\centering
@@ -53,6 +95,10 @@ on the quartz tuning fork, because quartz has piezoelectric properties and thus 
 	\caption{Steady state}
 	\label{fig:steady}
 \end{figure}
+
+\begin{thebibliography}{1}
+\bibitem{Qvalue} \texttt{https://mycourses.aalto.fi/pluginfile.php/211810/mod\_resource/content/1\\/projekti\_kertaohje4.pdf}, "Kvartsiresonaattorin mittaus", accessed 2016.06.01
+\end{thebibliography}
 
 \appendix
 
