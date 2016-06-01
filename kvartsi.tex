@@ -70,7 +70,7 @@ where according to figure \ref{fig:steady} $t \approx 0.4$s is the time constant
 \end{figure}
 
 An equivalence circuit of tuning fork is an electrical circuit which can't be distinguished from tuning fork in a black box. The components of equivalence circuit in figure \ref{fig:equivalence_circuit} are obtained from following equations:
-\begin{align}
+\begin{align} \label{eqn:equivalent}
 \begin{cases}
 L_m = \frac{2\rho L^3}{9e_p^2HT}\\
 C_m = \frac{1}{\omega_0^2L_m}\\
@@ -87,6 +87,28 @@ R_m \approx 5.3\cdot10^{-19}~\Omega\\
 C_0 \approx 3.5\cdot10^{-9}~\mathrm{F}
 \end{cases}
 \end{align*}
+
+As we can see, the values are far from typical, so it would be very difficult and expensive to produce needed components.
+
+\section{Measurement methods}
+To collect data we used a DAQ (Measurement Computing USB-1208HS-2AO analog input/output device). We used its analog out -function to produce wanted signals to the circuit in figure \ref{fig:circuit} and collected both it's original signal and the modified signals with analog inputs. The triangle in the circuit represents an operation amplifier, which transforms $V_+$ and $V_-$ signals to a single signal $V_{out}$:
+
+\begin{align}
+	V_{out} = A(V_+-V_-).
+\end{align}
+$A$ is a very large number, so in practice $V_{out}$ can get only values 9V and -9V.
+
+The whole circuit works as a voltage amplifier. Calculations are in appendix \ref{sec:voltamp}, and the final result is
+\begin{align}
+V_{out} = -\frac{R_F}{R_1}V_{in}.
+\end{align}
+
+\begin{figure}
+	\centering
+	\includegraphics[width = 0.5\textwidth]{kuvat/piiri}
+	\caption{Circuit used to collect data. Both batteries are 9V.}
+	\label{fig:circuit}
+\end{figure}
 
 \begin{figure}[!ht]
 	\centering
@@ -246,6 +268,7 @@ A good current meter on the other hand must have a low impedance, because it mus
 
 
 \subsubsection{Task 5}
+With trasimpedance amplifier it is possible to have a big voltage even with small currents, which makes measurements more easy and accurate. If we used a resistance instead, the voltage after it would be at most the same as before, meaning we would need more accurate measurement instruments to obtain the same accuracy.
 
 \subsection{Session 4}
 
@@ -290,7 +313,25 @@ We use sampling frequency of $\SI{500}{\kilo\hertz}$, which is over two times as
 \subsection{Session 5}
 
 \subsubsection{Task 1}
+Substituting the values to the \eqref{eqn:equivalent} we find the values for the equivalent circuit to be
 
+\begin{align*}
+\begin{cases}
+L_m \approx 3.3\cdot10^{-20}~\mathrm{H}\\
+C_m \approx 7.1\cdot10^8~\mathrm{F}\\
+R_m \approx 5.3\cdot10^{-19}~\Omega\\
+C_0 \approx 3.5\cdot10^{-9}~\mathrm{F}
+\end{cases}
+\end{align*}
 \subsubsection{Task 2}
-
+Impedance of the equivalent circuit is given by equation
+\begin{align*}
+Z(\omega)^{-1} = i\omega C_0 + \left(R_m+\frac{1}{i\omega C_m} + i\omega L_m \right)^{-1}.
+\end{align*}
+Assuming $C_0=0$ and using \eqref{eqn:equivalent} we can simplify this:
+\begin{align*}
+Z(\omega) &= R_m+\frac{1}{i\omega C_m} + i\omega L_m\\
+&=R_m+\frac{1}{i\omega \frac{1}{\omega^2L_m}} + i\omega L_m\\
+&=R_m -i\omega L_m + i\omega L_m = R_m
+\end{align*}
 \end{document}
