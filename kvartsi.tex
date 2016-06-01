@@ -41,7 +41,7 @@
 In this assignment we investigated electronic properties of one of the most common electronic components, the quartz tuning fork or quartz resonator, like one in figure \ref{fig:kvres}. It is used in watches and other every day electrical appliances to provide a stable clocking frequency. Typically the frequency is $f_0 = \SI{32768}{\hertz}$, because is is a round number ($32768_{10} = {2^{15}}_{10} = 1000000000000000_2$) in base 2, which is commonly used in electrical appliances.
 
 Contrary to conventional tuning fork, one does not need generate mechanical excitation
-on the quartz tuning fork, because quartz has piezoelectric properties and thus mechanical excitation can be replaced with electronic one.
+on the quartz tuning fork, because quartz has piezoelectric properties and thus mechanical excitation can be replaced with electronic one.$^{\cite{Intro}}$
 
 \section{Tuning fork}
 Piezoelectricity is a phenomena, where deformation of a material causes electrical current and vice versa. Crystal oscillators are made of piezoelectric materials, and in electric circuits they are used to produce an electrical signal with precise frequency. The Q-value of crystal oscillator is defined to be the oscillators energy per dissipated energy at one oscillation:
@@ -70,7 +70,7 @@ where according to figure \ref{fig:steady} $t \approx 0.4$s is the time constant
 \end{figure}
 
 An equivalence circuit of tuning fork is an electrical circuit which can't be distinguished from tuning fork in a black box. The components of equivalence circuit in figure \ref{fig:equivalence_circuit} are obtained from following equations:
-\begin{align}
+\begin{align} \label{eqn:equivalent}
 \begin{cases}
 L_m = \frac{2\rho L^3}{9e_p^2HT}\\
 C_m = \frac{1}{\omega_0^2L_m}\\
@@ -88,6 +88,15 @@ C_0 \approx 3.5\cdot10^{-9}~\mathrm{F}
 \end{cases}
 \end{align*}
 
+As we can see, the values are far from typical, so it would be very difficult and expensive to produce needed components.
+
+\begin{figure}
+	\centering
+	\includegraphics[width = 0.5\textwidth]{kuvat/piiri}
+	\caption{Circuit used to collect data. Both batteries are 9V.}
+	\label{fig:circuit}
+\end{figure}
+
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width = \textwidth]{kuvat/steadystate.png}
@@ -97,34 +106,59 @@ C_0 \approx 3.5\cdot10^{-9}~\mathrm{F}
 
 \section{Our circuit}
 
-The circuit we made and used is basically a voltage amplifier built around LF356N operational amplifier and later it is modified to current-voltage converter by replacing $R_1$-resistor with quartz resonator and changing $R_f$-resistor to a approximately $\SI{1}{\mega\ohm}$-resistor. The derivation of $K$ (equation \eqref{eqn:K}) is done in the appendix as part of a pretask.
+The circuit we made and used is basically a voltage amplifier built around LF356N operational amplifier with two resistors ($ R_1 = \SI{1}{\kilo\ohm}$ and $R_f = \SI{10}{\kilo\ohm}$) and later it is modified to current-voltage converter by replacing $R_1$-resistor with quartz resonator and changing $R_f$-resistor to a approximately $\SI{1}{\mega\ohm}$-resistor. The derivation of transresistance $K$ (equation \eqref{eqn:K}) is done in the appendix as part of a pretask.
 
-To measure quartz resonator the circuit must be connected to a DAQ-unit as shown in figure \ref{fig:circ} and then it can be measured by setting the DAQ-unit to output a sine wave with certain frequency and then measuring the output of our circuit. With multiple measurements a spike in gain is expected at the resonance frequency of the quartz resonator as seen in figure \ref{fig:f-g}.
+First we characterised the circuit by measuring its $G$-value by altering input voltage within range $\SI{0}{\volt} - \SI{1.7}{\volt}$ and reading the output voltage for each input voltage. Theoretical value is $G = -\frac{R_f}{R_1} \approx 10$ and with our measurement we obtained $G \approx 10.2$, which is quite good considering that usually resistors have 5\% - 10\% error margins in their values. According to this experiment a good amplitude for input voltage in ac-measurements would be something like $\SI{0.2}{\volt} - \SI{0.6}{\volt}$, because our circuit can only amplify signal up to $\SI{9}{\volt}$. Both for ac and dc, because ac for short periods of time is like dc, and thus our circuit amplifies them the same, except that there might some kind of echo effect or the circuit has a reaction time, because for high frequency ac the output has high amount of noise.
 
-We tested our circuit at frequency range of $\SI{10}{\kilo\hertz} - \SI{100}{\kilo\hertz}$ and noticed that the noise increases with the frequency, but however at approximately $\SI{30}{\kilo\hertz}$ the noise-to-signal ratio is still reasonable as seen in figure \ref{fig:nsr}, so we can use our circuit to obtain quite good approximations of properties of quartz resonator. 
+To measure quartz resonator the circuit must be connected to a DAQ-unit as shown in figure \ref{fig:circuit} and then it can be measured by setting the DAQ-unit to output a sine wave with certain frequency and then measuring the output of our circuit. With multiple measurements a spike in gain is expected at the resonance frequency of the quartz resonator as seen in figure \ref{fig:f-g}. Also as seen in figure \ref{fig:f-ps_res} the phase shift seems to go towards $\pi$ when the frequency goes towards resonance frequency.
 
+<<<<<<< HEAD
+We tested our circuit at frequency range of $\SI{10}{\kilo\hertz} - \SI{100}{\kilo\hertz}$ and noticed that the noise increases with the frequency, but however at approximately $\SI{30}{\kilo\hertz}$ the noise-to-signal ratio is still reasonable as seen in figure \ref{fig:nsr}, so we can use our circuit to obtain quite good approximations of properties of quartz resonator. The same noise is seen in figure \ref{fig:f-ps}.
+
+=======
+>>>>>>> parent of c0da348... kohta 9
 \begin{figure}[!ht]
 \centering
-\includegraphics[width = \textwidth]{kuvat/f-g.png}
+\includegraphics[width = 0.8\textwidth]{kuvat/f-g.png}
 \caption{Gain in circuit as function of frequency. Spike is clearly seen at resonance frequency of the resonator.}
 \label{fig:f-g}
 \end{figure}
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width = \textwidth]{kuvat/piiri.png}
-\caption{Circuit diagram of voltage amplifier connected to DAQ-unit.}
-\label{fig:circ}
+\includegraphics[width = 0.8\textwidth]{kuvat/f-ps_res.png}
+\caption{Phase shift in circuit as function of frequency near resonance frequency.}
+\label{fig:f-ps_res}
 \end{figure}
+
+<<<<<<< HEAD
+
+%\begin{figure}[!ht]
+%\centering
+%\includegraphics[width = \textwidth]{kuvat/piiri.png}
+%\caption{Circuit diagram of voltage amplifier connected to DAQ-unit.}
+%\label{fig:circ}
+%\end{figure}
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width = \textwidth]{kuvat/nsr.png}
+\includegraphics[width = 0.8\textwidth]{kuvat/nsr.png}
 \caption{Gain as function of frequency without quartz resonator.}
 \label{fig:nsr}
 \end{figure}
 
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = 0.8\textwidth]{kuvat/f-ps.png}
+\caption{Phase shift as function of frequency.}
+\label{fig:f-ps}
+\end{figure}
+
+=======
+>>>>>>> parent of c0da348... kohta 9
 \begin{thebibliography}{1}
+\bibitem{Intro} \texttt{https://mycourses.aalto.fi/pluginfile.php/211815/mod\_folder\\/content/0/TuningFork.pdf}, "Introduction to the quartz tuning fork", accessed 2016.06.01
+
 \bibitem{Qvalue} \texttt{https://mycourses.aalto.fi/pluginfile.php/211810/mod\_resource/content/1\\/projekti\_kertaohje4.pdf}, "Kvartsiresonaattorin mittaus", accessed 2016.06.01
 \end{thebibliography}
 
@@ -143,7 +177,7 @@ We tested our circuit at frequency range of $\SI{10}{\kilo\hertz} - \SI{100}{\ki
 
 In this project we are supposed to study electric properties of quartz resonators and build a circuit, which is used to collect data from the resonator. Data is then analyzed with MATLAB. Also we are going to measure some properties of the circuit itself.
 
-\subsubsection{Task 2}
+\subsubsection{Task 2} \label{sec:voltamp}
 
 $V_+$ is connected to ground, so $V_+ = 0$.
 
@@ -236,7 +270,7 @@ And because $A$ is usually large,
 I_{in} \approx \frac{V_{out}}{R_f}
 \end{equation*}
 
-\subsubsection{Task 3}
+\subsubsection{Task 3} \label{sec:K}
 According to previous task,
 
 \begin{align}
@@ -255,6 +289,7 @@ A good current meter on the other hand must have a low impedance, because it mus
 
 
 \subsubsection{Task 5}
+With trasimpedance amplifier it is possible to have a big voltage even with small currents, which makes measurements more easy and accurate. If we used a resistance instead, the voltage after it would be at most the same as before, meaning we would need more accurate measurement instruments to obtain the same accuracy.
 
 \subsection{Session 4}
 
@@ -299,7 +334,52 @@ We use sampling frequency of $\SI{500}{\kilo\hertz}$, which is over two times as
 \subsection{Session 5}
 
 \subsubsection{Task 1}
+Substituting the values to the \eqref{eqn:equivalent} we find the values for the equivalent circuit to be
 
+\begin{align*}
+\begin{cases}
+L_m \approx 3.3\cdot10^{-20}~\mathrm{H}\\
+C_m \approx 7.1\cdot10^8~\mathrm{F}\\
+R_m \approx 5.3\cdot10^{-19}~\Omega\\
+C_0 \approx 3.5\cdot10^{-9}~\mathrm{F}
+\end{cases}
+\end{align*}
 \subsubsection{Task 2}
+Impedance of the equivalent circuit is given by equation
+\begin{align*}
+Z(\omega)^{-1} = i\omega C_0 + \left(R_m+\frac{1}{i\omega C_m} + i\omega L_m \right)^{-1}.
+\end{align*}
+Assuming $C_0=0$ and using \eqref{eqn:equivalent} we can simplify this:
+\begin{align*}
+Z(\omega) &= R_m+\frac{1}{i\omega C_m} + i\omega L_m\\
+&=\gamma L_m+\frac{1}{i\omega \frac{1}{\omega_0^2L_m}} + i\omega L_m\\
+&=\frac{L_m}{\omega}\left[\gamma\omega + i\left(\omega^2 - \omega_0^2\right)\right]
+\end{align*}
+The modulus of impedance is then
+\begin{align} \label{eqn:impedance}
+\left| Z(\omega) \right| = \frac{L_m}{\omega}\sqrt{\gamma^2\omega^2 +\left(\omega^2 - \omega_0^2\right)^2}
+\end{align}
 
+\subsection{Task 3}
+Ohms law gives $I = \frac{U}{|Z|}$, and substituting \ref{eqn:impedance} to $|Z|$ we get
+\begin{align}
+	I(\omega) = \frac{U\omega}{L_m\sqrt{\gamma^2\omega^2 +\left(\omega^2 - \omega_0^2\right)^2}}.
+\end{align}
+When $\omega \approx \omega_0$, by using \eqref{eqn:equivalent} we obtain
+\begin{align*}
+	I(\omega) &\approx \frac{U\omega_0}{L_m}\frac{1}{\sqrt{\gamma^2\omega^2 +\left(\omega^2 - \omega_0^2\right)^2}}\\
+	&=\frac{U\omega_0}{\frac{2\rho L^3}{9e_p^2HT}}\frac{1}{\sqrt{\gamma^2\omega^2 +\left(\omega^2 - \omega_0^2\right)^2}}\\
+	&=\frac{(9/2)U\omega_0e_p^2HT}{\rho L^3}\frac{1}{\sqrt{\gamma^2\omega^2 +\left(\omega^2 - \omega_0^2\right)^2}}\\
+	&=\frac{F}{m}\frac{1}{\sqrt{\gamma^2\omega^2 +\left(\omega^2 - \omega_0^2\right)^2}},
+\end{align*}
+<<<<<<< HEAD
+<<<<<<< HEAD
 \end{document}
+=======
+where $F = \frac{9}{2}U\omega_0e_p^2HT$ and $m = \rho L^3$. Thus the current as a function of frequency is the general form of a driven harmonic oscillator.
+\end{document}
+>>>>>>> 19d53fb30824cd998c789b20f6da986682bd7b34
+=======
+where $F = \frac{9}{2}U\omega_0e_p^2HT$ and $m = \rho L^3$. Thus the current as a function of frequency is the general form of a driven harmonic oscillator.
+\end{document}
+>>>>>>> 19d53fb30824cd998c789b20f6da986682bd7b34
