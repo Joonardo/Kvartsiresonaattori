@@ -318,7 +318,25 @@ Z(\omega)^{-1} = i\omega C_0 + \left(R_m+\frac{1}{i\omega C_m} + i\omega L_m \ri
 Assuming $C_0=0$ and using \eqref{eqn:equivalent} we can simplify this:
 \begin{align*}
 Z(\omega) &= R_m+\frac{1}{i\omega C_m} + i\omega L_m\\
-&=R_m+\frac{1}{i\omega \frac{1}{\omega^2L_m}} + i\omega L_m\\
-&=R_m -i\omega L_m + i\omega L_m = R_m
+&=\gamma L_m+\frac{1}{i\omega \frac{1}{\omega_0^2L_m}} + i\omega L_m\\
+&=\frac{L_m}{\omega}\left[\gamma\omega + i\left(\omega^2 - \omega_0^2\right)\right]
 \end{align*}
+The modulus of impedance is then
+\begin{align} \label{eqn:impedance}
+\left| Z(\omega) \right| = \frac{L_m}{\omega}\sqrt{\gamma^2\omega^2 +\left(\omega^2 - \omega_0^2\right)^2}
+\end{align}
+
+\subsection{Task 3}
+Ohms law gives $I = \frac{U}{|Z|}$, and substituting \ref{eqn:impedance} to $|Z|$ we get
+\begin{align}
+	I(\omega) = \frac{U\omega}{L_m\sqrt{\gamma^2\omega^2 +\left(\omega^2 - \omega_0^2\right)^2}}.
+\end{align}
+When $\omega \approx \omega_0$, by using \eqref{eqn:equivalent} we obtain
+\begin{align*}
+	I(\omega) &\approx \frac{U\omega_0}{L_m}\frac{1}{\sqrt{\gamma^2\omega^2 +\left(\omega^2 - \omega_0^2\right)^2}}\\
+	&=\frac{U\omega_0}{\frac{2\rho L^3}{9e_p^2HT}}\frac{1}{\sqrt{\gamma^2\omega^2 +\left(\omega^2 - \omega_0^2\right)^2}}\\
+	&=\frac{(9/2)U\omega_0e_p^2HT}{\rho L^3}\frac{1}{\sqrt{\gamma^2\omega^2 +\left(\omega^2 - \omega_0^2\right)^2}}\\
+	&=\frac{F}{m}\frac{1}{\sqrt{\gamma^2\omega^2 +\left(\omega^2 - \omega_0^2\right)^2}},
+\end{align*}
+where $F = \frac{9}{2}U\omega_0e_p^2HT$ and $m = \rho L^3$. Thus the current as a function of frequency is the general form of a driven harmonic oscillator.
 \end{document}
