@@ -49,11 +49,12 @@ f_0 \approx 0.16\frac{T}{L^2}\sqrt{\frac{E}{\rho}},
 where $L = 3.98 $mm is the length of one quartz bar, $T = 0.60 $mm the width of the bar, $E = 79 $GPa the Young modulus and $\rho = 2660\frac{\mathrm{kg}}{\mathrm{m}^3}$ the density of quartz. Also the thickness of fork we are using in our work is $H = 0.30$mm. Advantage of having two bars instead of one is that the oscillations of two bars at the fulcrum cancel each other, resulting to better Q-value.
 
 We can estimate the Q-value of the tuning fork from figure \ref{fig:steady} by using equation$^{\cite{Qvalue}}$
+
 \begin{align*}
 t &= \frac{f_0}{Q}\\
 \Rightarrow Q &= tf_0 \approx 13000
 \end{align*}
-where $t \approx 0.4$s is the time constant, which tells the time it takes for the resonator to stabilize to the equilibrium amplitude.
+where according to figure \ref{fig:steady} $t \approx 0.4$s is the time constant, which tells the time it takes for the resonator to stabilize to the equilibrium amplitude.
 
 \begin{figure}
 \centering
@@ -87,12 +88,10 @@ C_0 \approx 3.5\cdot10^{-9}~\mathrm{F}
 	\label{fig:kvres}
 \end{figure}
 
-\section{Results}
-
-\begin{figure}
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[width = \textwidth]{kuvat/steadystate.png}
-	\caption{Steady state}
+	\caption{Voltage plotted from connecting the driving voltage to $\SI{0.5}{\second}$ after connecting.}
 	\label{fig:steady}
 \end{figure}
 
@@ -159,21 +158,80 @@ G = -\frac{R_f}{R_{in}}
 
 \subsubsection{Task 2}
 
-In old western movies the wagon wheel seems to be rotating in the wrong direction because camera's frame rate 
+In old western movies the wagon wheel seems to be rotating in the wrong direction because camera's frame rate is so slow that it can't properly get samples of fast rotating wagon wheel, and thus the rods have enough time between frames to move in positions that are closer to the next rod's previous position than rod's original position.
 
 \subsubsection{Task 3}
 
+As seen in figure \ref{fig:samp} the higher the frequency of the signal is the worse the samples fit to signal. Thus with $\SI{10}{\kilo\hertz}$ signal the samples show the shape correctly, but with $\SI{250}{\kilo\hertz}$ signal they do not.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = \textwidth]{kuvat/sampling.png}
+\caption{Sine waves (blue) and samples (red) for frequencies $\SI{10}{\kilo\hertz}$, $\SI{100}{\kilo\hertz}$ and $\SI{250}{\kilo\hertz}$ with sampling frequency of $\SI{500}{\kilo\hertz}$.}
+\label{fig:samp}
+\end{figure}
+
 \subsubsection{Task 4}
+
+Tasks 2 and 3 are actually the same phenomenon, where sampling frequency affects the collected data and thus may make it seem like something else than it is.
 
 \subsection{Session 3}
 
 \subsubsection{Task 1}
 
+Let signal $s(t) = A \sin (2\pi(nf_s \pm f_1) \cdot t)$, where sampling frequency is $f_s$ and thus after sampling we only take values of $t$ which conform equation $t = k/f_s$, where $k = 0, 1, 2, 3...$ Thus the sampled signal $s_s$ is
+
+\begin{align*}
+s_s(k) &= A \sin (2\pi k \cdot (n \pm \frac{f_1}{f_s})) \\
+&= A \sin (2\pi kn \pm 2\pi k \frac{f_1}{f_s}) \\
+&= A (\sin (2\pi kn) \cos (\pm 2\pi k \frac{f_1}{f_s}) + \sin (\pm 2\pi k \frac{f_1}{f_s}) \cos (2\pi kn)) \\
+&= A \sin (\pm 2\pi k \frac{f_1}{f_s}) \\
+&= A \sin (\pm 2\pi f_1 t)
+\end{align*}
+
+Thus sampled signal of $s$ looks the same as signal with frequency $f_1$.
+
 \subsubsection{Task 2}
+
+According to Kirchoff's laws and basic operational amplifier properties,
+
+\begin{align*}
+V_- - V_{out} = R_f I_{in} \quad & \wedge \quad V_{out} = -AV_- \\
+\Rightarrow -V_{out} (1 + \frac{1}{A}) &= R_f I_{in} \\
+\Leftrightarrow V_{out} &= -\frac{A}{A + 1} R_f I_{in}
+\end{align*}
+
+And because $A$ is usually large,
+
+\begin{align*}
+V_{out} &\approx -R_f I_{in} \\
+\Rightarrow K &= -R_f
+\end{align*}
 
 \subsection{Session 4}
 
 \subsubsection{Task 1}
+
+Let stone be a cube length of a side $d = \SI{0.1}{\metre}$.
+
+\begin{align*}
+C = \epsilon \frac{A}{d} = \epsilon d \quad \wedge \quad Q &= CU \quad \wedge \quad \frac{Q}{d^2} = e_p \frac{x}{d} \\
+\Rightarrow \frac{\epsilon d U}{d} &= e_p x \\
+\Leftrightarrow U &= \frac{e_p x}{\epsilon}
+\end{align*}
+
+Also $F = \frac{EAx}{d} = Edx$, thus
+
+\begin{equation*}
+U = \frac{e_p F}{\epsilon_0 \epsilon_r E d}
+\end{equation*}
+
+Assuming some values $E = \SI{79}{\giga\pascal}$, $e_p = \SI{0.18}{\coulomb\per\square\meter}$, $F = \SI{500}{\newton}$, $\epsilon_r = 4.5$ and $\epsilon_0 \approx \SI{9e-12}{\farad\per\meter}$ we obtain
+
+\begin{equation*}
+U \approx \SI{280}{\volt}
+\end{equation*}
+
 
 \subsubsection{Task 2}
 
