@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.2.4)  1 JUN 2016 23:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.2.4)  1 JUN 2016 23:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -914,54 +914,48 @@ Package pdftex.def Info: kuvat/steadystate.png used on input line 102.
  427.5975pt x 319.94531pt>
 File: kuvat/f-g.png Graphic file (type png)
  <use kuvat/f-g.png>
-Package pdftex.def Info: kuvat/f-g.png used on input line 122.
+Package pdftex.def Info: kuvat/f-g.png used on input line 119.
 (pdftex.def)             Requested size: 312.00119pt x 233.45071pt.
 
 <kuvat/f-ps_res.png, id=45, 421.575pt x 297.36093pt>
 File: kuvat/f-ps_res.png Graphic file (type png)
  <use kuvat/f-ps_res.png>
-Package pdftex.def Info: kuvat/f-ps_res.png used on input line 129.
+Package pdftex.def Info: kuvat/f-ps_res.png used on input line 126.
 (pdftex.def)             Requested size: 312.00119pt x 220.0754pt.
 
+<kuvat/nsr.png, id=46, 421.575pt x 316.18124pt>
+File: kuvat/nsr.png Graphic file (type png)
+ <use kuvat/nsr.png>
+Package pdftex.def Info: kuvat/nsr.png used on input line 140.
+(pdftex.def)             Requested size: 312.00119pt x 234.00423pt.
 
-LaTeX Warning: File `kuvat/nsr.png' not found on input line 145.
+<kuvat/f-ps.png, id=47, 421.575pt x 297.36093pt>
+File: kuvat/f-ps.png Graphic file (type png)
+ <use kuvat/f-ps.png>
+Package pdftex.def Info: kuvat/f-ps.png used on input line 147.
+(pdftex.def)             Requested size: 312.00119pt x 220.0754pt.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 153.
 
-
-! Package pdftex.def Error: File `kuvat/nsr.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.145 ...ics[width = 0.8\textwidth]{kuvat/nsr.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 145.
 
 (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<kuvat/f-ps.png, id=46, 421.575pt x 297.36093pt>
-File: kuvat/f-ps.png Graphic file (type png)
- <use kuvat/f-ps.png>
-Package pdftex.def Info: kuvat/f-ps.png used on input line 152.
-(pdftex.def)             Requested size: 312.00119pt x 220.0754pt.
-
-Overfull \hbox (66.59262pt too wide) in paragraph at lines 162--163
+Overfull \hbox (66.59262pt too wide) in paragraph at lines 155--156
 []\T1/cmtt/m/n/12 https://mycourses.aalto.fi/pluginfile.php/211810/mod_resource
 /content/1 
  []
 
 [6 <./kuvat/steadystate.png (PNG copy)>] (./matlab/ac.m [7 <./kuvat/f-g.png (PN
-G copy)>]) [8 <./kuvat/f-ps_res.png (PNG copy)>] [9] [10 <./kuvat/f-ps.png (PNG
- copy)>] <kuvat/sampling.png, id=65, 557.08125pt x 478.78876pt>
+G copy)>]) [8 <./kuvat/f-ps_res.png (PNG copy)>]
+
+LaTeX Warning: Text page 9 contains only floats.
+
+[9 <./kuvat/nsr.png (PNG copy)> <./kuvat/f-ps.png (PNG copy)>] [10]
+<kuvat/sampling.png, id=66, 557.08125pt x 478.78876pt>
 File: kuvat/sampling.png Graphic file (type png)
 
 <use kuvat/sampling.png>
-Package pdftex.def Info: kuvat/sampling.png used on input line 232.
+Package pdftex.def Info: kuvat/sampling.png used on input line 225.
 (pdftex.def)             Requested size: 390.0pt x 335.19368pt.
  [11] [12 <./kuvat/sampling.png (PNG copy)>] [13]
 [14] [15] [16] (./kvartsi.aux)
@@ -970,10 +964,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 14161 strings out of 493054
- 271869 string characters out of 6140587
- 287453 words of memory out of 5000000
- 17543 multiletter control sequences out of 15000+600000
+ 14165 strings out of 493054
+ 271944 string characters out of 6140587
+ 289454 words of memory out of 5000000
+ 17547 multiletter control sequences out of 15000+600000
  23159 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,14n,43p,10379b,1677s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -993,10 +987,10 @@ r/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/tex
 mf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/share/texmf-dist/fonts/t
 ype1/public/cm-super/sftt1200.pfb>
-Output written on kvartsi.pdf (17 pages, 2108577 bytes).
+Output written on kvartsi.pdf (17 pages, 2129098 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
+ 144 PDF objects out of 1000 (max. 8388607)
  95 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
