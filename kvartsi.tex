@@ -207,13 +207,24 @@ And because $A$ is usually large,
 I_{in} \approx \frac{V_{out}}{R_f}
 \end{equation*}
 
-\subsection{Task 3}
+\subsubsection{Task 3}
 According to previous task,
 
 \begin{align*}
 V_{out} &= -R_f I_{in} \\
 \Rightarrow K &= -R_f
 \end{align*}
+
+Thus our circuit works as a current-voltage converter.
+
+\subsubsection{Task 4}
+
+A good voltage meter must have a high impedance, because then it doesn't create an alternate route for current and thus affects the circuit as little as possible.
+
+A good current meter on the other hand must have a low impedance, because it must let current flow through itself, and if it has a high impedance it affects the flow of current.
+
+
+\subsubsection{Task 5}
 
 \subsection{Session 4}
 
@@ -241,6 +252,19 @@ U \approx \SI{280}{\volt}
 
 
 \subsubsection{Task 2}
+
+To fit to hand the length of tuning fork must be $l \approx \SI{0.1}{\meter}$ and usually they are made of steel which has density $\rho \approx \SI{7.7e3}{\kilo\gram\per\cubic\meter}$ and young's modulus $E = \SI{200}{\giga\pascal}$. Also they have frequency $f_0 = \SI{440}{\hertz}$. We solve $T$ from equation $f_0 \approx 0.16 \frac{T}{L^2} \sqrt{\frac{E}{\rho}}$ and obtain
+
+\begin{equation*}
+T = \frac{f_0 L^2}{0.16} \sqrt{\frac{\rho}{E}} \approx \SI{0.5}{\centi\meter}
+\end{equation*}
+
+The result for thickness $T$ is reasonable, so it is possible to build tuning fork with these characteristics.
+
+
+\subsubsection{Task 3}
+
+We use sampling frequency of $\SI{500}{\kilo\hertz}$, which is over two times as large as signal frequency $\SI{33}{\kilo\hertz}$, so according to 2. session's pretasks it should be easily usable for this measurement.
 
 \subsection{Session 5}
 
